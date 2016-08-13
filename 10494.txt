@@ -1,0 +1,27 @@
+package skr;
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Skr
+{
+    public static void main(String args[]) 
+    {
+        Scanner s = new Scanner(System.in);
+        BigInteger a = new BigInteger ("1000");
+        BigInteger b = new BigInteger ("1000");
+        BigInteger d = new BigInteger ("1000");
+        while(s.hasNext())
+        {
+            a = s.nextBigInteger();
+            String str = s.next();
+            char ch = str.charAt(0);
+            b = s.nextBigInteger();
+            if(ch == '/')
+                d = a.divide(b);
+            else
+                d = a.mod(b);
+            
+            System.out.printf("%d\n", d);
+        }
+    }
+}
+

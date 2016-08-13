@@ -1,0 +1,23 @@
+package using_class_in_main;
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Using_class_in_main {
+
+    public static void main(String[] args) 
+    {
+     Scanner in = new Scanner (System.in);
+    
+        
+        int n, i;
+        while(in.hasNext())
+        {
+            BigInteger mul = new BigInteger("1");
+            n = in.nextInt(); 
+            for(i = 1; i <= n; i++)
+                mul = mul.multiply(new BigInteger (i + ""));
+            System.out.println(n+"!");
+            System.out.println(mul);
+        }
+    }
+}
+

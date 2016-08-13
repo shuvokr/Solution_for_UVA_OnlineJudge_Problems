@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.math.BigDecimal;
+
+public class Main 
+{
+	
+	public static void main(String[] args) 
+	{
+		Scanner sf = new Scanner(System.in);
+		int T, i, j;
+		BigDecimal a, b;
+		String str;
+		boolean mark;
+		
+	    T = sf.nextInt();
+	    while(T-- > 0)
+	    {
+	    	a = sf.nextBigDecimal();
+	    	b = sf.nextBigDecimal();
+	    	str = a.add(b).toString();
+	    	i = str.length() - 1;
+	    	mark = true;
+	    	while(str.charAt( i ) == '0' && str.charAt( i ) != '.') i--;
+	    	if(str.charAt( i ) == '.')
+	    	{
+	    		mark = false;
+	    	}
+	    	else i++;
+	    	for(j = 0; j < i; j++) System.out.print(str.charAt(j));
+	    	if(!mark) System.out.print(".0");
+	    	System.out.println();
+	    }
+	}
+}

@@ -1,0 +1,38 @@
+package shuvo;
+
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Scanner in = new Scanner(System.in);
+        int n , m, i, kag = 0;
+        while(in.hasNext())
+        {
+            BigInteger sum = new BigInteger("0");
+            BigInteger tmp = new BigInteger("0");
+            n = in.nextInt();
+            m = in.nextInt();
+            if(n == 0 && m == 0) break;
+            for(i = 0; i < n; i++)
+            {
+                tmp = in.nextBigInteger();
+                sum = sum.add(tmp);            
+            }
+            
+            BigInteger tot = new BigInteger("0");
+            tot = sum.divide(new BigInteger(m + ""));
+            
+            kag++;
+            System.out.print("Bill #");
+            System.out.print(kag);
+            System.out.print(" costs ");
+            System.out.print(sum);
+            System.out.print(": each friend should pay ");
+            System.out.println(tot);
+            System.out.println("");
+        }
+    }
+}

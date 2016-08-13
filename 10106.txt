@@ -1,0 +1,18 @@
+package using_class_in_main;
+import java.util.Scanner;
+import java.math.BigInteger;
+public class Using_class_in_main {
+
+    public static void main(String[] args) 
+    {
+     Scanner in = new Scanner (System.in);
+        while(in.hasNext())
+        {
+            BigInteger a = in.nextBigInteger();
+            BigInteger b = in.nextBigInteger();
+            BigInteger mul = a.multiply(b);
+            System.out.println(mul);
+        }
+    }
+}
+

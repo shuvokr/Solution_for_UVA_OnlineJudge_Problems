@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.math.BigInteger;
+
+public class Main 
+{
+	public static void main(String[] args) 
+	{
+	    
+	    Scanner input = new Scanner(System.in);
+	    int t = input.nextInt();
+	    boolean space = false; 
+	    while(t-- > 0)
+	    {
+	    	if( space ) System.out.println();
+	    	else space = true;
+	    	BigInteger n = new BigInteger("0");
+	    	n = input.nextBigInteger();
+	    	/******************sqrt*****************************/
+	    	
+	    	BigInteger x0, x1 = n, div = new BigInteger("2");
+            do
+            {
+                x0 = x1;
+                x1 = x0.add(n.divide( x0 )).divide( div );
+
+            }while(x0.compareTo( x1 ) != 0);
+            System.out.println(x1);
+	    	
+	    	/***************************************************/
+	    }
+	}
+}
